@@ -160,8 +160,6 @@ export default class User extends Component{
     showUpdate = (user) => {
         // 保存分类对象
         this.user = user;
-        //console.log(user)
-        //console.log(user.memberName)
         // 更新状态
         this.setState({
             showStatus: 2

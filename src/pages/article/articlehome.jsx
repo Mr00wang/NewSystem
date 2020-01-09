@@ -40,9 +40,9 @@ export default class ArticleHome extends Component{
                 title:"操作",
                 render:(article) => (
                     <span>
-                        <Button type="primary" onClick={() => {}}>修改文章</Button>&nbsp;&nbsp;
+                        <Button type="primary" onClick={() => this.props.history.push('/article/addupdate', article)}>修改文章</Button>&nbsp;&nbsp;
                         <Button type="primary" onClick={() => {this.deleteArticle(article)}}>删除文章</Button>&nbsp;&nbsp;
-                  </span>
+                    </span>
                 )
             },
         ]
@@ -128,7 +128,7 @@ export default class ArticleHome extends Component{
         const {loading, articles} = this.state;
         const title = (
             <span>
-                <span>文章编辑</span>&nbsp;&nbsp;
+                {/*<span>文章编辑</span>&nbsp;&nbsp;*/}
                  <Select style={{width:130}} defaultValue="1">
                     <Option value="1">按ID查询</Option>
                     <Option value="2" disabled>按文章题目查询</Option>
@@ -145,7 +145,7 @@ export default class ArticleHome extends Component{
         );
         const extra = (
             <span>
-                <Button type="primary">
+                <Button type="primary" onClick={() => this.props.history.push('/article/addupdate')}>
                     <Icon type="plus"/>
                     <span>添加文章</span>
                 </Button>

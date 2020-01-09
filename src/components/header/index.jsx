@@ -39,7 +39,10 @@ class Header extends Component{
         this.setState({dayPictureUrl, weather})
     };
     getTitle = () => {
-        const path = this.props.location.pathname;
+        let path = this.props.location.pathname;
+        if(path.indexOf('/article') === 0) {
+            path = '/article'
+        }
         let title;
         menuList.forEach(item => {
             if(item.key===path) {
@@ -81,13 +84,12 @@ class Header extends Component{
                 memoryUtils.user = {};
                 //console.log("header"+memoryUtils.user)
                 //跳转到Login
-                message.success('退出成功')
+                message.success('退出成功');
                 this.props.history.replace('/login')
             }
 
         });
-
-    }
+    };
     render() {
         const {currentTime, weather, dayPictureUrl} = this.state;
         const username = memoryUtils.user[0].username;

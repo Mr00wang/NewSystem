@@ -5,7 +5,7 @@ import {Layout , Icon} from "antd";
 import LeftNav from '../../components/left-nav'
 import Header from '../../components/header'
 import Home from '../home/home'
-import ArticleHome from "../article/ArticleHome";
+import Article from "../article/article";
 import Category from "../category/category";
 import User from "../user/user";
 import NotFound from "../waring/notFound";
@@ -61,7 +61,7 @@ export default class Admin extends Component{
                             <Route path='/home' component={Home}/>
                             <Route path='/user' component={User}/>
                             <Route path='/category' component={Category}/>
-                            <Route path='/article' component={ArticleHome}/>
+                            <Route path='/article' component={Article}/>
                             <Route path='/about' component={About}/>
                             <Route component={NotFound}/>
                         </Switch>

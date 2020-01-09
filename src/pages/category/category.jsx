@@ -69,7 +69,7 @@ export default class Category extends Component{
               title:"操作",
               render:(article) => (
                   <span>
-                      <Button type="primary" onClick={() => {}}>修改文章</Button>&nbsp;&nbsp;
+                      <Button type="primary" onClick={() => {}}>查看详情</Button>&nbsp;&nbsp;
                       <Button type="primary" onClick={() => {this.deleteArticle(article)}}>删除文章</Button>&nbsp;&nbsp;
                   </span>
               )
